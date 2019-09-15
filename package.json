@@ -1,0 +1,12 @@
+{
+  "name": "try-typeorm",
+  "private": true,
+  "scripts": {
+    "start": "nodemon ts-node index.ts"
+  },
+  "dependencies": {
+    "nodemon": "^1.19.2",
+    "ts-node": "^8.3.0",
+    "typeorm": "^0.2.19"
+  }
+}
