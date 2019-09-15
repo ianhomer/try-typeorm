@@ -2,7 +2,7 @@
   "name": "try-typeorm",
   "private": true,
   "scripts": {
-    "start": "nodemon -e ts-node/register ./index.ts"
+    "start": "ts-node ./index.ts"
   },
   "dependencies": {
     "nodemon": "^1.19.2",
