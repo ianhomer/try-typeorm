@@ -3,7 +3,7 @@ import {createConnection} from "typeorm";
 import {User} from "./entity/User";
 import {Group} from "./entity/Group";
 
-const seconds = new Date().getTime() / 1000
+const seconds = Math.floor(new Date().getTime() / 1000)
 
 createConnection().then(async connection => {
 
@@ -24,5 +24,9 @@ createConnection().then(async connection => {
     await connection.createQueryBuilder()
         .relation(Group, "users")
         .of(group).add(user);
+
+    const groups = await connection.manager.find(Group);
+    console.log("Loaded groups: ", groups);
+
 
 }).catch(error => console.log(error));
