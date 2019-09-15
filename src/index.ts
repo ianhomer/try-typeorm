@@ -28,5 +28,4 @@ createConnection().then(async connection => {
     const groups = await connection.manager.find(Group);
     console.log("Loaded groups: ", groups);
 
-
 }).catch(error => console.log(error));
