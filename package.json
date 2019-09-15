@@ -2,7 +2,8 @@
    "name": "try-typeorm",
    "private": true,
    "scripts": {
-      "start": "nodemon -x ts-node src/index.ts"
+      "start": "nodemon -x ts-node src/index.ts",
+      "migration:run": "ts-node ./node_modules/typeorm/cli.js migration:run"
    },
    "dependencies": {
       "@types/node": "^8.0.29",

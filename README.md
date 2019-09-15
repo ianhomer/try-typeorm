@@ -16,11 +16,15 @@ Try TypeORM
 Starting with no migration scripts, create baseline for the model:
 
     ts-node ./node_modules/typeorm/cli.js migration:generate -n baseline
-        
-        
-    typeorm migration:generate -n baseline
 
-    typeorm schema:sync
+Run migration
 
-    typeorm migration:create -n baseline
-    
+    npm run migration:run
+
+Make model change and then run
+                      
+    ts-node ./node_modules/typeorm/cli.js migration:generate -n change    
+
+# Thanks
+
+* https://stackoverflow.com/questions/52800204/typeorms-migrationgenerate-regenerates-the-whole-database-schema
