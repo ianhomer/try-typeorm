@@ -1,14 +1,15 @@
 import "reflect-metadata";
 import {createConnection} from "typeorm";
 import {User} from "./entity/User";
+import {Group} from "./entity/Group";
+
+const seconds = new Date().getTime() / 1000
 
 createConnection().then(async connection => {
 
-    console.log("Inserting a new user into the database...");
+    console.log(`${seconds} : Inserting a new user into the database...`);
     const user = new User();
-    user.firstName = "Timber";
-    user.lastName = "Saw";
-    user.age = 25;
+    user.name = "my-name-" + seconds;
     await connection.manager.save(user);
     console.log("Saved a new user with id: " + user.id);
 
@@ -16,6 +17,12 @@ createConnection().then(async connection => {
     const users = await connection.manager.find(User);
     console.log("Loaded users: ", users);
 
-    console.log("Here you can setup and run express/koa/any other framework.");
+    const group = new Group();
+    group.name = "my-group-" + seconds;
+    await connection.manager.save(group);
+
+    await connection.createQueryBuilder()
+        .relation(Group, "users")
+        .of(group).add(user);
 
 }).catch(error => console.log(error));
