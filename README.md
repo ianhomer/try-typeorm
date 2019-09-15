@@ -24,6 +24,9 @@ Run migration
 Make model change and then run
                       
     ts-node ./node_modules/typeorm/cli.js migration:generate -n change    
+    typeorm migration:generate -n change
+    npm run typeorm:cli migration:generate -- -n change
+    npm run typeorm:cli migration:generate -- -n change
 
 # Thanks
 
