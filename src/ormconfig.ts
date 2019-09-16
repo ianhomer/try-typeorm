@@ -6,8 +6,12 @@ const config: ConnectionOptions = {
     entities: [
         __dirname + '/entity/*{.ts,.js}',
     ],
+    migrations: [
+        __dirname + '/migration/*{.ts,.js}',
+    ],
     cli: {
-        migrationsDir: 'src/migrations',
+        entitiesDir: "src/entity",
+        migrationsDir: 'src/migrations'
     }
 };
 
