@@ -3,6 +3,7 @@ import { ConnectionOptions } from 'typeorm';
 const config: ConnectionOptions = {
     type: 'sqlite',
     database: "./data/db.sqlite",
+    synchronize: false,
     entities: [
         __dirname + '/entity/*{.ts,.js}',
     ],
@@ -11,7 +12,7 @@ const config: ConnectionOptions = {
     ],
     cli: {
         entitiesDir: "src/entity",
-        migrationsDir: 'src/migrations'
+        migrationsDir: 'src/migration'
     }
 };
 

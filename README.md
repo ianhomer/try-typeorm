@@ -16,7 +16,7 @@ Try TypeORM
 
 Starting with no migration scripts, create baseline for the model:
 
-    ts-node ./node_modules/typeorm/cli.js migration:generate -n baseline
+    npm run typeorm:cli -- migration:generate -n baseline
 
 Run migration
 
@@ -25,7 +25,7 @@ Run migration
 Make model change and then run
                       
     typeorm migration:generate -n change
-    npm run typeorm:cli migration:generate -- -n change
+    npm run typeorm:cli -- migration:generate -n change
 
 # Thanks
 
