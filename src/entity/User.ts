@@ -10,6 +10,9 @@ export class User {
     @Column()
     name: string;
 
+    @Column()
+    email: string;
+
     @ManyToMany(type => Group)
     @JoinTable()
     categories: Group[];
