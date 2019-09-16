@@ -1,11 +1,12 @@
 import "reflect-metadata";
 import {createConnection} from "typeorm";
+import * as ormconfig from './ormconfig';
 import {User} from "./entity/User";
 import {Group} from "./entity/Group";
 
 const seconds = Math.floor(new Date().getTime() / 1000)
 
-createConnection().then(async connection => {
+createConnection(ormconfig).then(async connection => {
 
     console.log(`${seconds} : Inserting a new user into the database...`);
     const user = new User();

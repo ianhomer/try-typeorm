@@ -4,8 +4,8 @@
    "scripts": {
       "build": "tsc",
       "start": "nodemon -x ts-node src/index.ts",
-      "migration:run": "ts-node ./node_modules/typeorm/cli.js migration:run",
-      "typeorm:cli": "ts-node ./node_modules/typeorm/cli -f ./ormconfig.json"
+      "migration": "ts-node ./node_modules/typeorm/cli.js migration:run",
+      "typeorm:cli": "ts-node ./node_modules/typeorm/cli -f ./src/ormconfig.ts"
    },
    "dependencies": {
       "@types/node": "^8.0.29",

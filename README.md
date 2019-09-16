@@ -4,6 +4,7 @@ Try TypeORM
 
 # tl;dr
 
+    npm run migration
     npm start
     
 # How was this project created
@@ -19,15 +20,15 @@ Starting with no migration scripts, create baseline for the model:
 
 Run migration
 
-    npm run migration:run
+    npm run migration
 
 Make model change and then run
                       
     ts-node ./node_modules/typeorm/cli.js migration:generate -n change    
     typeorm migration:generate -n change
     npm run typeorm:cli migration:generate -- -n change
-    npm run typeorm:cli migration:generate -- -n change
 
 # Thanks
 
 * https://stackoverflow.com/questions/52800204/typeorms-migrationgenerate-regenerates-the-whole-database-schema
+* https://wanago.io/2019/01/28/typeorm-migrations-postgres/
