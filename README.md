@@ -14,18 +14,18 @@ Try TypeORM
     
 # Creating migration scripts
 
-Starting with no migration scripts, create baseline for the model:
+Note that typeorm config has synchronize set to false so that we can explicitly control migrations. When this
+option is true then the migrations are done on the fly at runtime.
 
-    npm run typeorm:cli -- migration:generate -n baseline
+Starting with no migration scripts, create baseline for the model and run migration
 
-Run migration
-
+    npm run migration:generate -- -n baseline
     npm run migration
 
-Make model change and then run
+Make model change and then re-run migration
                       
-    typeorm migration:generate -n change
-    npm run typeorm:cli -- migration:generate -n change
+    npm run migration:generate -- -n change
+    npm run migration
 
 # Thanks
 

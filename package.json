@@ -5,6 +5,7 @@
       "build": "tsc",
       "start": "nodemon -x ts-node src/index.ts",
       "migration": "npm run typeorm:cli migration:run",
+      "migration:generate": "npm run typeorm:cli -- migration:generate",
       "typeorm:cli": "ts-node ./node_modules/typeorm/cli -f ./src/ormconfig.ts"
    },
    "dependencies": {
