@@ -10,14 +10,15 @@
     "update": "npx npm-check-updates -u"
   },
   "dependencies": {
-    "@types/node": "^14.0.14",
-    "nodemon": "^2.0.4",
+    "nodemon": "^2.0.6",
     "reflect-metadata": "^0.1.13",
-    "sqlite3": "^4.2.0",
-    "typeorm": "0.2.25",
-    "typescript": "^3.9.5"
+    "sqlite3": "^5.0.0",
+    "typeorm": "0.2.29"
   },
   "devDependencies": {
-    "ts-node": "8.10.2"
+    "@types/node": "^14.14.13",
+    "npm-check-updates": "^10.2.5",
+    "ts-node": "9.1.1",
+    "typescript": "^4.1.3"
   }
 }
