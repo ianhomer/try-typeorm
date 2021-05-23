@@ -4,10 +4,11 @@ Try TypeORM
 
 ## tl;dr
 
+    npm install
     npm run migration
     npm start
 
-## How was this project created
+## How was this project created?
 
     npm install -g typeorm
     typeorm init
@@ -15,7 +16,7 @@ Try TypeORM
 ## Creating migration scripts
 
 Note that typeorm config has synchronize set to false so that we can explicitly
-control migrations. When this option is true then the migrations are done on the
+control migrations. When this option is true then the migrations occur on the
 fly at runtime.
 
 Starting with no migration scripts, create baseline for the model and run
@@ -28,6 +29,10 @@ Make model change and then re-run migration
 
     npm run migration:generate -- -n change
     npm run migration
+
+## Generate ERDs
+
+    docker run -d -p 8080:8080 plantuml/plantuml-server:tomcat
 
 ## Thanks
 
