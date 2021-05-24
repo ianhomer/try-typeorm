@@ -16,7 +16,7 @@ export class Group {
   @Column()
   name: string;
 
-  @ManyToMany((type) => User)
+  @ManyToMany(() => User)
   @JoinTable()
   users: User[];
 }

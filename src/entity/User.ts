@@ -22,7 +22,7 @@ export class User {
   @Column({nullable: true})
   address: string;
 
-  @ManyToMany((type) => Group)
+  @ManyToMany(() => Group)
   @JoinTable()
   categories: Group[];
 }
