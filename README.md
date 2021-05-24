@@ -8,7 +8,7 @@ Try TypeORM
     npm run migration
     npm start
 
-## How was this project created?
+## Creating a new typeorm project
 
     npm install -g typeorm
     typeorm init
@@ -36,5 +36,5 @@ Make model change and then re-run migration
 
 ## Thanks
 
-* <https://stackoverflow.com/questions/52800204/typeorms-migrationgenerate-regenerates-the-whole-database-schema>
-* <https://wanago.io/2019/01/28/typeorm-migrations-postgres/>
+- <https://stackoverflow.com/questions/52800204/typeorms-migrationgenerate-regenerates-the-whole-database-schema>
+- <https://wanago.io/2019/01/28/typeorm-migrations-postgres/>

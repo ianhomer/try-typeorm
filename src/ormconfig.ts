@@ -1,21 +1,36 @@
-import { ConnectionOptions } from 'typeorm';
+import { ConnectionOptions } from "typeorm";
 
-const config: ConnectionOptions = {
-    type: 'sqlite',
-    database: "./data/db.sqlite",
-    synchronize: false,
-    entities: [
-        __dirname + '/entity/*{.ts,.js}',
-    ],
-    migrations: [
-        __dirname + '/migration/*{.ts,.js}',
-    ],
-    cli: {
-        entitiesDir: "src/entity",
-        migrationsDir: 'src/migration'
-    }
+const connection = "postgres";
+
+const entities = [__dirname + "/entity/*{.ts,.js}"];
+const migrations = [__dirname + "/migration/*{.ts,.js}"];
+const cli = {
+  entitiesDir: "src/entity",
+  migrationsDir: "src/migration",
 };
 
-console.log(`Entities : ${config.entities}`)
+let config: ConnectionOptions;
+
+if (connection == "postgres") {
+  config = {
+    type: "postgres",
+    database: "dojo",
+    username: "dojo",
+    password: "password",
+    synchronize: true,
+    entities
+  };
+} else {
+  config = {
+    type: "sqlite",
+    database: "./data/db.sqlite",
+    synchronize: false,
+    entities,
+    migrations,
+    cli,
+  };
+}
+
+console.log(`Entities : ${config.entities}`);
 
 export = config;

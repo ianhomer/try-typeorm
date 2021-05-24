@@ -1,19 +1,28 @@
-import {Entity, PrimaryGeneratedColumn, Column, ManyToMany, JoinTable} from "typeorm";
-import {Group} from "./Group";
+import {
+  Column,
+  Entity,
+  JoinTable,
+  ManyToMany,
+  PrimaryGeneratedColumn,
+} from "typeorm";
+
+import { Group } from "./Group";
 
 @Entity()
 export class User {
+  @PrimaryGeneratedColumn()
+  id: number;
 
-    @PrimaryGeneratedColumn()
-    id: number;
+  @Column()
+  name: string;
 
-    @Column()
-    name: string;
+  @Column()
+  email: string;
 
-    @Column()
-    email: string;
+  @Column({nullable: true})
+  address: string;
 
-    @ManyToMany(type => Group)
-    @JoinTable()
-    categories: Group[];
+  @ManyToMany((type) => Group)
+  @JoinTable()
+  categories: Group[];
 }

@@ -35,4 +35,3 @@ jobs:
             git commit -am "Auto-update"
             git push
           fi
-

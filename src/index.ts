@@ -1,16 +1,19 @@
 import "reflect-metadata";
-import {createConnection} from "typeorm";
-import * as ormconfig from './ormconfig';
-import {User} from "./entity/User";
-import {Group} from "./entity/Group";
 
-const seconds = Math.floor(new Date().getTime() / 1000)
+import { createConnection } from "typeorm";
 
-createConnection(ormconfig).then(async connection => {
+import { Group } from "./entity/Group";
+import { User } from "./entity/User";
+import * as ormconfig from "./ormconfig";
 
+const seconds = Math.floor(new Date().getTime() / 1000);
+
+createConnection(ormconfig)
+  .then(async (connection) => {
     console.log(`${seconds} : Inserting a new user into the database...`);
     const user = new User();
     user.name = "my-name-" + seconds;
+    user.email = "my@purplepip.com";
     await connection.manager.save(user);
     console.log("Saved a new user with id: " + user.id);
 
@@ -22,11 +25,13 @@ createConnection(ormconfig).then(async connection => {
     group.name = "my-group-" + seconds;
     await connection.manager.save(group);
 
-    await connection.createQueryBuilder()
-        .relation(Group, "users")
-        .of(group).add(user);
+    await connection
+      .createQueryBuilder()
+      .relation(Group, "users")
+      .of(group)
+      .add(user);
 
     const groups = await connection.manager.find(Group);
     console.log("Loaded groups: ", groups);
-
-}).catch(error => console.log(error));
+  })
+  .catch((error) => console.log(error));
