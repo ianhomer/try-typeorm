@@ -19,16 +19,16 @@
     "update": "npx npm-check-updates -u"
   },
   "dependencies": {
-    "nodemon": "^2.0.12",
+    "nodemon": "^2.0.13",
     "pg": "^8.7.1",
     "reflect-metadata": "^0.1.13",
     "sqlite3": "^5.0.2",
     "typeorm": "^0.2.37"
   },
   "devDependencies": {
-    "@types/node": "^16.9.4",
-    "@typescript-eslint/eslint-plugin": "^4.31.1",
-    "@typescript-eslint/parser": "^4.31.1",
+    "@types/node": "^16.10.1",
+    "@typescript-eslint/eslint-plugin": "^4.31.2",
+    "@typescript-eslint/parser": "^4.31.2",
     "eslint": "^7.32.0",
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-simple-import-sort": "^7.0.0",
