@@ -23,17 +23,17 @@
     "pg": "^8.7.3",
     "reflect-metadata": "^0.1.13",
     "sqlite3": "^5.0.2",
-    "typeorm": "^0.3.4"
+    "typeorm": "^0.3.5"
   },
   "devDependencies": {
     "@types/node": "^17.0.23",
-    "@typescript-eslint/eslint-plugin": "^5.17.0",
-    "@typescript-eslint/parser": "^5.17.0",
-    "eslint": "^8.12.0",
+    "@typescript-eslint/eslint-plugin": "^5.18.0",
+    "@typescript-eslint/parser": "^5.18.0",
+    "eslint": "^8.13.0",
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-simple-import-sort": "^7.0.0",
     "format-package": "^7.0.0",
-    "npm-check-updates": "^12.5.7",
+    "npm-check-updates": "^12.5.8",
     "prettier": "^2.6.2",
     "ts-node": "10.7.0",
     "typeorm-uml": "^1.6.5",
