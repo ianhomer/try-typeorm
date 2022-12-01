@@ -3,7 +3,6 @@
   "private": true,
   "scripts": {
     "build": "tsc",
-    "erd": "npm run build && typeorm-uml --download=erd.svg --with-table-names-only --format=svg --plantuml-url=http://localhost:8080 dist/ormconfig.js",
     "erd:public": "typeorm-uml -d erd.png dist/ormconfig.js",
     "eslint": "eslint src --ext .ts,.tsx",
     "eslint:fix": "eslint src --ext .ts,.tsx --fix",
@@ -19,24 +18,23 @@
     "update": "npx npm-check-updates -u"
   },
   "dependencies": {
-    "nodemon": "^2.0.16",
-    "pg": "^8.7.3",
+    "nodemon": "^2.0.20",
+    "pg": "^8.8.0",
     "reflect-metadata": "^0.1.13",
-    "sqlite3": "^5.0.8",
-    "typeorm": "^0.3.6"
+    "sqlite3": "^5.1.2",
+    "typeorm": "^0.3.10"
   },
   "devDependencies": {
-    "@types/node": "^17.0.33",
-    "@typescript-eslint/eslint-plugin": "^5.23.0",
-    "@typescript-eslint/parser": "^5.23.0",
-    "eslint": "^8.15.0",
+    "@types/node": "^18.11.10",
+    "@typescript-eslint/eslint-plugin": "^5.45.0",
+    "@typescript-eslint/parser": "^5.45.0",
+    "eslint": "^8.28.0",
     "eslint-config-prettier": "^8.5.0",
-    "eslint-plugin-simple-import-sort": "^7.0.0",
+    "eslint-plugin-simple-import-sort": "^8.0.0",
     "format-package": "^7.0.0",
-    "npm-check-updates": "^13.0.0",
-    "prettier": "^2.6.2",
-    "ts-node": "10.7.0",
-    "typeorm-uml": "^1.6.5",
-    "typescript": "^4.6.4"
+    "npm-check-updates": "^16.4.3",
+    "prettier": "^2.8.0",
+    "ts-node": "10.9.1",
+    "typescript": "^4.9.3"
   }
 }
