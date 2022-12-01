@@ -2,7 +2,7 @@
 
 Try TypeORM
 
-## tl;dr
+## Getting started
 
     npm install
     npm run migration
